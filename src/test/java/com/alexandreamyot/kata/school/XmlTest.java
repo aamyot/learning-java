@@ -1,3 +1,5 @@
+package com.alexandreamyot.kata.school;
+
 import org.junit.Test;
 import org.w3c.dom.Document;
 import org.xml.sax.InputSource;

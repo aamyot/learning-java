@@ -9,9 +9,9 @@ repositories {
 }
 
 def libs = [
-    hamcrest_all: 'org.hamcrest:hamcrest-all:1.3',
-    mockito     : 'org.mockito:mockito-all:1.10.19',
-    junit       : 'junit:junit:4.11@jar',
+        hamcrest_all: 'org.hamcrest:hamcrest-all:1.3',
+        mockito     : 'org.mockito:mockito-all:1.10.19',
+        junit       : 'junit:junit:4.11@jar',
 ]
 
 dependencies {
