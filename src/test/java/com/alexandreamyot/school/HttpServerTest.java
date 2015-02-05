@@ -1,4 +1,4 @@
-package com.alexandreamyot.kata.school;
+package com.alexandreamyot.school;
 
 import com.sun.net.httpserver.HttpServer;
 import org.junit.After;

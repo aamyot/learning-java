@@ -1,4 +1,4 @@
-package com.alexandreamyot.kata.school;
+package com.alexandreamyot.school;
 
 import org.junit.Test;
 import org.w3c.dom.Document;
