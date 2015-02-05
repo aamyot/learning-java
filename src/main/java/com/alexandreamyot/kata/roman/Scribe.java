@@ -52,7 +52,7 @@ public class Scribe {
         return "";
     }
 
-    public static Integer toNumeral(String roman) {
+    public static Integer toArabic(String roman) {
         return toNumeral(roman, 0);
     }
 
