@@ -22,29 +22,17 @@ public class DiamondTest {
     }
 
     @Test
-    public void diamondOfD() {
-        assertThat(new Diamond('D').make(), contains(
-                "...A...",
-                "..B.B..",
-                ".C...C.",
-                "D.....D",
-                ".C...C.",
-                "..B.B..",
-                "...A..."));
-    }
-
-    @Test
     public void canPrintSpacing() {
         assertThat(new Diamond('A').spacing(5), equalTo("....."));
     }
 
     @Test
-    public void lineSizeOfBShoulBe3() {
+    public void lineSizeOfDiamondB() {
         assertThat(new Diamond('B').lineSize(), equalTo(3));
     }
 
     @Test
-    public void lineSizeOfCShoulBe5() {
+    public void lineSizeOfDiamondC() {
         assertThat(new Diamond('C').lineSize(), equalTo(5));
     }
 
@@ -63,5 +51,16 @@ public class DiamondTest {
         assertThat(new Diamond('D').level('D'), equalTo("D.....D"));
     }
 
+    @Test
+    public void diamondOfD() {
+        assertThat(new Diamond('D').make(), contains(
+                "...A...",
+                "..B.B..",
+                ".C...C.",
+                "D.....D",
+                ".C...C.",
+                "..B.B..",
+                "...A..."));
+    }
 
 }
