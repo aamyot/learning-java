@@ -9,17 +9,17 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 @RunWith(value = Parameterized.class)
-public class ArabicToRomanTest {
+public class RomanTest {
 
     private final int arabic;
     private final String roman;
 
-    public ArabicToRomanTest(String roman, int arabic) {
+    public RomanTest(String roman, int arabic) {
         this.roman = roman;
         this.arabic = arabic;
     }
 
-    @Parameterized.Parameters(name="Roman numeral of {0} is {1}")
+    @Parameterized.Parameters(name="Roman {0}, Arabic {1}")
     public static Iterable<Object[]> toArabicData() {
         return asList(new Object[][]{
                 {"I", 1},
@@ -34,7 +34,12 @@ public class ArabicToRomanTest {
     }
 
     @Test
-    public void testToArabic() {
+    public void romanTranslatesTo() {
         assertThat(Scribe.toArabic(roman), equalTo(arabic));
+    }
+
+    @Test
+    public void arabicTranslatesTo() {
+        assertThat(Scribe.toRoman(arabic), equalTo(roman));
     }
 }
