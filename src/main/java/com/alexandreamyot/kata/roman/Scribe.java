@@ -29,9 +29,8 @@ public class Scribe {
         }
 
         for (Map.Entry<String, Integer> entry : ROMAN_DICTIONARY.entrySet()) {
-            int value = entry.getValue();
-            if (arabic >= value) {
-                roman += entry.getKey() + toRoman(arabic - value);
+            if (arabic >= entry.getValue()) {
+                roman += entry.getKey() + toRoman(arabic - entry.getValue());
                 break;
             }
         }
@@ -47,9 +46,8 @@ public class Scribe {
         }
 
         for (Map.Entry<String, Integer> entry : ROMAN_DICTIONARY.entrySet()) {
-            String key = entry.getKey();
-            if (roman.startsWith(key)) {
-                acc += entry.getValue() + toArabic(roman.substring(key.length()));
+            if (roman.startsWith(entry.getKey())) {
+                acc += entry.getValue() + toArabic(roman.substring(entry.getKey().length()));
                 break;
             }
         }
